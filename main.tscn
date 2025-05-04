@@ -314,3 +314,5 @@ shape = SubResource("BoxShape3D_h2yge")
 transform = Transform3D(1, 0, 0, 0, 0.788848, 0.614588, 0, -0.614588, 0.788848, 0, 4.06918, 0)
 
 [node name="TEST NODE LOL" type="Node" parent="."]
+
+[node name="Test node #2" type="Node" parent="."]
