@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://uastj7106d5t"]
+
+[ext_resource type="Script" uid="uid://16pihdypmjd5" path="res://dialogue_box.gd" id="1_n23yb"]
+[ext_resource type="PackedScene" uid="uid://ckpk4lj513lvi" path="res://dialogue_line.tscn" id="2_0nste"]
+
+[node name="DialogueBox" type="Control" node_paths=PackedStringArray("diag_container")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_n23yb")
+diag_container = NodePath("OutsideColor/InsideColor/ScrollContainer/DialogueContainer")
+
+[node name="OutsideColor" type="ColorRect" parent="."]
+offset_left = 94.0
+offset_top = 447.0
+offset_right = 1052.0
+offset_bottom = 629.0
+color = Color(0.0160978, 0.318524, 0.264353, 1)
+
+[node name="InsideColor" type="ColorRect" parent="OutsideColor"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 4.0
+offset_right = 942.0
+offset_bottom = 176.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="OutsideColor/InsideColor"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 8.0
+offset_right = 913.0
+offset_bottom = 161.0
+horizontal_scroll_mode = 0
+
+[node name="DialogueContainer" type="VBoxContainer" parent="OutsideColor/InsideColor/ScrollContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 2
+
+[node name="DialogueLine" parent="OutsideColor/InsideColor/ScrollContainer/DialogueContainer" instance=ExtResource("2_0nste")]
+layout_mode = 2

@@ -1,6 +1,6 @@
 extends CharacterBody3D
 #gets AnimatedSprite3d once it's loaded
-@onready var sprite: AnimatedSprite3D = $SpriteAnimator as AnimatedSprite3D #typcast
+@onready var sprite: AnimatedSprite3D = $SpriteAnimator as AnimatedSprite3D #typecast
 
 @export var move_speed : float = 3.0 #@export is like [SerializeField]
 @export var jump_speed : float = 3.0 #going upward in Godot is a negative axis
