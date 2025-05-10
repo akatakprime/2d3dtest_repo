@@ -1,16 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://uastj7106d5t"]
 
 [ext_resource type="Script" uid="uid://16pihdypmjd5" path="res://dialogue_box.gd" id="1_n23yb"]
-[ext_resource type="Script" uid="uid://3swtmpn554we" path="res://scroll_container.gd" id="2_n23yb"]
+[ext_resource type="PackedScene" uid="uid://ckpk4lj513lvi" path="res://dialogue_line.tscn" id="2_0nste"]
 
-[node name="DialogueBox" type="Control" node_paths=PackedStringArray("diag_container", "choice_container")]
+[node name="DialogueBox" type="Control" node_paths=PackedStringArray("diag_container")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_n23yb")
 diag_container = NodePath("OutsideColor/InsideColor/ScrollContainer/DialogueContainer")
-choice_container = NodePath("ChoicesContainer")
 
 [node name="OutsideColor" type="ColorRect" parent="."]
 layout_mode = 0
@@ -34,22 +33,11 @@ offset_top = 8.0
 offset_right = 913.0
 offset_bottom = 161.0
 horizontal_scroll_mode = 0
-script = ExtResource("2_n23yb")
 
 [node name="DialogueContainer" type="VBoxContainer" parent="OutsideColor/InsideColor/ScrollContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(900, 0)
 layout_mode = 2
 
-[node name="ChoicesContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 2.334
-anchor_top = 11.314
-anchor_right = 26.25
-anchor_bottom = 15.579
-offset_left = 469.64
-offset_top = -223.56
-offset_right = -4.00012
-offset_bottom = -180.16
-alignment = 2
+[node name="DialogueLine" parent="OutsideColor/InsideColor/ScrollContainer/DialogueContainer" instance=ExtResource("2_0nste")]
+layout_mode = 2

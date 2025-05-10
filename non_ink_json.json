@@ -1,0 +1,48 @@
+{
+  "root": {
+    "text": [
+      "Once upon a time...\nThere was a story to be told!",
+      "This is a second line of dialogue"
+    ],
+    "choices": [
+      {
+        "text": "This is choice 1.",
+        "jump": "first"
+      },
+      {
+        "text": "This is choice 2.",
+        "jump": "second"
+      }
+    ]
+  },
+  "first": {
+    "text": [
+      "You chose the first choice! Great job blah blah blah blah blah blah"
+    ],
+    "choices": [
+      {
+        "text": "This is choice 3.",
+        "jump": "third"
+      },
+      {
+        "text": "This is choice 4.",
+        "jump": "fourth"
+      }
+    ]
+  },
+  "second": {
+    "text": [
+      "You chose the second choice! Amaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazing"
+    ]
+  },
+  "third": {
+    "text": [
+      "You chose the third choice!"
+    ]
+  },
+  "fourth": {
+    "text": [
+      "You chose the fourth choice! Great job!"
+    ]
+  }
+}

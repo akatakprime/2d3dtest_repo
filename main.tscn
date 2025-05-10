@@ -1,10 +1,11 @@
-[gd_scene load_steps=40 format=3 uid="uid://dq5sifasevyxl"]
+[gd_scene load_steps=41 format=3 uid="uid://dq5sifasevyxl"]
 
 [ext_resource type="Texture2D" uid="uid://dgctskcvtswsm" path="res://Jumping.png" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://de34h0teh4wew" path="res://player.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dyru7hp1v7qbw" path="res://Landing.png" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://cdvtthwvc1obq" path="res://Walking.png" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://uastj7106d5t" path="res://dialogue_box.tscn" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://ckpk4lj513lvi" path="res://dialogue_line.tscn" id="6_272bh"]
 [ext_resource type="Script" uid="uid://dbbe3oavrotg" path="res://game_logic.gd" id="7_272bh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
@@ -321,7 +322,11 @@ transform = Transform3D(1, 0, 0, 0, 0.788848, 0.614588, 0, -0.614588, 0.788848, 
 
 [node name="DialogueBox" parent="CanvasLayer" instance=ExtResource("5_7mycd")]
 
+[node name="DialogueLine" parent="CanvasLayer/DialogueBox" instance=ExtResource("6_272bh")]
+layout_mode = 0
+
 [node name="SubViewport" type="SubViewport" parent="."]
 
-[node name="GameLogic" type="Node" parent="."]
+[node name="GameLogic" type="Node" parent="." node_paths=PackedStringArray("dialogue_box")]
 script = ExtResource("7_272bh")
+dialogue_box = NodePath("../CanvasLayer/DialogueBox")

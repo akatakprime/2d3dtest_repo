@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://botiqlfde8whu"]
+
+[ext_resource type="Theme" uid="uid://pt6rjfd2i65j" path="res://new_theme.tres" id="1_03l2t"]
+[ext_resource type="Script" uid="uid://bb67gjfgos874" path="res://choice_button.gd" id="1_nme6o"]
+
+[node name="ChoiceButton" type="Button"]
+theme = ExtResource("1_03l2t")
+text = "Hello"
+script = ExtResource("1_nme6o")
