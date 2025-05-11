@@ -14,9 +14,13 @@ func _init() -> void:
 
 func load_inventory(): #Make sure player has an entry for each possible item
 	if player_data["inventory"].size() != player_data["possible_items"].size():
-		print("Adding new items")
+		#adding new items
 		for item in player_data["possible_items"]:
 			if !player_data["inventory"].has(item):
+				player_data["inventory"][item] = 0
+		#removing old items that don't exist anymore
+		for item in player_data["inventory"]:
+			if !player_data["possible_items"].has(item):
 				player_data["inventory"][item] = 0
 
 #TYPE SAFETY

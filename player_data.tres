@@ -1,13 +1,13 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c0pn14qp5lu6e"]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dnsrlb0qlymgf"]
 
 [ext_resource type="Script" uid="uid://cho6echfjqmom" path="res://player_data_script.gd" id="1_ldidj"]
 
 [resource]
 script = ExtResource("1_ldidj")
 name = "kiki"
-score = 0
+score = null
 inventory = {
-"Key": 2,
+"Key": 0,
 "Knife": 0,
 "Map": 0,
 "Phone": 1,
