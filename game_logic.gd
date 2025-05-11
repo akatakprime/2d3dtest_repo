@@ -4,4 +4,5 @@ extends Node
 var json_file = "non_ink_json.json"
 
 func _ready():
-	dialogue_box.from_JSON(json_file)
+	SaveSystem.edit("name", "kiki")
+	#dialogue_box.from_JSON(json_file)
